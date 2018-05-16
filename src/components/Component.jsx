@@ -1,9 +1,29 @@
 import React from 'react';
+import gql from 'lib/gql';
+import PropTypes from 'prop-types';
 
-const Component = () => (
+const fragment = `
+  fragment componentPost on Post {
+    title
+  }
+`;
+
+const Component = ({ post, dataExample }) => (
   <div>
-    <h1>Hello im a button</h1>
+    {JSON.stringify(post)} -
+    {dataExample}
   </div>
 );
+
+Component.fragment = fragment;
+
+Component.defaultProps = {
+  dataExample: 'dataExample'
+};
+
+Component.propTypes = {
+  post: gql.checkShape(fragment).isRequired,
+  dataExample: PropTypes.string
+};
 
 export default Component;
