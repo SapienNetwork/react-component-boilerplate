@@ -1,8 +1,7 @@
 import React from 'react';
-import PostContainer from 'containers/post/Post';
 
 export default () => (
   <div>
-    <PostContainer />
+    <h1>Content here</h1>
   </div>
 );

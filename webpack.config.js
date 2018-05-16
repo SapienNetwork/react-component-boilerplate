@@ -9,8 +9,7 @@ module.exports = {
     alias: {
       '@': resolve('src'),
       lib: resolve('src/lib'),
-      components: resolve('src/components'),
-      containers: resolve('src/containers')
+      components: resolve('src/components')
     },
     modules: [
       'node_modules',
