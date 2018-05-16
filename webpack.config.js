@@ -8,8 +8,9 @@ module.exports = {
     extensions: ['.js', '.jsx', '.json'],
     alias: {
       '@': resolve('src'),
-      lib: resolve('lib'),
-      components: resolve('src/components')
+      lib: resolve('src/lib'),
+      components: resolve('src/components'),
+      containers: resolve('src/containers')
     },
     modules: [
       'node_modules',

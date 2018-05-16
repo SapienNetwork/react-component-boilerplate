@@ -39,6 +39,7 @@ module.exports = {
       'error',
       'always'
     ],
+    'no-underscore-dangle': 'off',
     'react/jsx-filename-extension': 'off',
     'no-unused-expressions': 'warn',
     'no-useless-concat': 'warn',

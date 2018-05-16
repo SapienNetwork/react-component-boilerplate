@@ -2,13 +2,13 @@ import gql from 'lib/gql';
 import Fake from '@/test/fake';
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import Component from './Component';
+import Post from './Post';
 
-storiesOf('Component', module)
+storiesOf('Post', module)
   .add('to Storybook', () => (
-    <Component
+    <Post
       post={gql.filter(
-        Component.fragment,
+        Post.fragment,
         Fake.post()
       )}
     />
