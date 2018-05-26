@@ -10,6 +10,18 @@ yarn install
 yarn storybook
 ```
 
+## Develop
+```bash
+# serve the app at localhost:8080
+yarn dev
+```
+
+## Build
+```bash
+# build for production
+yarn build
+```
+
 ## Lint
 ```bash
 # lint all the things
