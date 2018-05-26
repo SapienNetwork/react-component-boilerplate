@@ -1,9 +1,14 @@
 const path = require('path');
-const HtmlWebPackPlugin = require('html-webpack-plugin');
 
-const resolve = dir => path.join(__dirname, '', dir);
+const resolve = dir => path.join(__dirname, '..', dir);
 
 module.exports = {
+  entry: './src/index.js',
+  output: {
+    path: resolve('dist'),
+    filename: 'index.js',
+    libraryTarget: 'commonjs2'
+  },
   resolve: {
     extensions: ['.js', '.jsx', '.json'],
     alias: {
@@ -25,21 +30,10 @@ module.exports = {
         use: {
           loader: 'babel-loader'
         }
-      },
-      {
-        test: /\.html$/,
-        use: [
-          {
-            loader: 'html-loader'
-          }
-        ]
       }
     ]
   },
-  plugins: [
-    new HtmlWebPackPlugin({
-      template: './src/index.html',
-      filename: './index.html'
-    })
-  ]
+  externals: {
+    react: 'commonjs react'
+  }
 };
