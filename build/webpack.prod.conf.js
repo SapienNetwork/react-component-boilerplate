@@ -1,39 +1,13 @@
 const path = require('path');
+const utils = require('./utils');
+const merge = require('webpack-merge');
+const baseWebpackConfig = require('./webpack.base.conf');
 
-const resolve = dir => path.join(__dirname, '..', dir);
-
-module.exports = {
+module.exports = merge(baseWebpackConfig, {
   entry: './src/index.js',
   output: {
-    path: resolve('dist'),
+    path: utils.resolve('dist'),
     filename: 'index.js',
     libraryTarget: 'commonjs2'
   },
-  resolve: {
-    extensions: ['.js', '.jsx', '.json'],
-    alias: {
-      '@': resolve('src'),
-      lib: resolve('src/lib'),
-      components: resolve('src/components')
-    },
-    modules: [
-      'node_modules',
-      resolve('src'),
-      resolve('node_modules')
-    ]
-  },
-  module: {
-    rules: [
-      {
-        test: /\.(js|jsx)$/,
-        exclude: /node_modules/,
-        use: {
-          loader: 'babel-loader'
-        }
-      }
-    ]
-  },
-  externals: {
-    react: 'commonjs react'
-  }
-};
+})
