@@ -53,6 +53,7 @@
     "webpack-merge": "^4.1.2"
   },
   "devDependencies": {
-    "executioner": "^2.0.1"
+    "executioner": "^2.0.1",
+    "ora": "^2.1.0"
   }
 }
