@@ -4,7 +4,6 @@
   "description": "Sapien Module",
   "main": "dist/index.js",
   "scripts": {
-    "dev": "webpack --inline --progress --watch --mode development --config build/webpack.dev.conf.js",
     "build": "webpack --mode production --config build/webpack.prod.conf.js",
     "lint": "eslint --ext .js,.jsx src",
     "storybook": "start-storybook -p 5000 -c storybook",
