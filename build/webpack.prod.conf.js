@@ -8,6 +8,6 @@ module.exports = merge(baseWebpackConfig, {
   output: {
     path: utils.resolve('dist'),
     filename: 'index.js',
-    libraryTarget: 'commonjs2'
+    libraryTarget: 'umd'
   },
 })
